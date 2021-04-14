@@ -1,7 +1,7 @@
 # LibraryManager
 PHP+MySQL
 index.php is the user's entry page
-mybook.sql is the database of the library management system
+library.sql is the database of the library management system
 Library Management System
 Project Name: Book Borrowing System
 The overall function description of the project: This project is a borrowing system that simulates the library. Through this system, you can query the basic information of the current book, whether the book is in the library or who borrowed the book, and query the basic personal information and the borrowing situation. The system performs book borrowing operations.
