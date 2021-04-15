@@ -42,13 +42,13 @@ CREATE TABLE `borrow_list` (
 
 
 INSERT INTO `borrow_list` (`book_id`, `user_id`, `borrow_date`, `back_date`) VALUES
-(1, 10000, '2018-10-18', '2018-12-18'),
-(2, 10000, '2018-10-18', '2018-12-18'),
-(3, 10000, '2019-11-18', '2020-03-18'),
+(1, 10000, '2018-10-18', '2020-12-18'),
+(2, 10000, '2018-10-18', '2020-12-18'),
+(3, 10000, '2019-11-18', '2021-03-18'),
 (4, 10010, '2019-12-25', '2020-03-25'),
-(5, 10010, '2018-10-13', '2019-04-13'),
-(6, 10010, '2018-10-16', '2019-03-16'),
-(8, 18888, '2018-10-17', '2019-02-17');
+(5, 10010, '2018-10-13', '2021-04-13'),
+(6, 10010, '2018-10-16', '2020-03-16'),
+(8, 18888, '2018-10-17', '2021-02-17');
 
 
 
@@ -58,8 +58,8 @@ CREATE TABLE `user` (
   `name` char(15) DEFAULT NULL,
   `Email` VARCHAR(32) DEFAULT NULL,
   `Phone` int(11) NOT NULL,
-  `status` tinyint(3) UNSIGNED NOT NULL DEFAULT '1' COMMENT '0isloss,1isNormal',
-  `admin` tinyint(3) UNSIGNED NOT NULL DEFAULT '0' COMMENT '0is User,1is Admin',
+  `status` tinyint(3) UNSIGNED NOT NULL DEFAULT '1' COMMENT '0 is unnormal,1 is Normal',
+  `admin` tinyint(3) UNSIGNED NOT NULL DEFAULT '0' COMMENT '0isuser,1is Admin',
   `last_login_time` datetime DEFAULT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8;
 
