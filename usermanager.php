@@ -2,7 +2,7 @@
 include_once('header.php');
 include_once("conn.php");
 $userid = $_SESSION['id'];
-$flag = 0;
+$flag = 1;
 $queryUser = "select * from user where id = '$userid'";
 $st = $dbh->query($queryUser);
 foreach ($st as $row){
