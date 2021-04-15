@@ -1,5 +1,5 @@
 body{
-    /*background-image: url('../images/bg.jpg') 100% 100%;*/
+  
     background: url("../images/bg.jpg");
     background-attachment:fixed;
     background-size: 100%;
@@ -179,7 +179,7 @@ a{
     text-align: center;
 }
 
-/*--------------------------用户信息页面--------------------------*/
+
 #userinfo{
     width: 60%;
     margin: 0 auto;
