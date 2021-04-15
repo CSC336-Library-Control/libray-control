@@ -5,14 +5,6 @@ SET time_zone = "+00:00";
 
 
 
---
-
--- --------------------------------------------------------
-
---
-
---
-
 CREATE TABLE `book_info` (
   `id` int(11) NOT NULL,
   `name` char(30) NOT NULL,
@@ -24,9 +16,7 @@ CREATE TABLE `book_info` (
   `desc` text
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8;
 
---
 
---
 
 INSERT INTO `book_info` (`id`, `name`, `author`, `press`, `press_time`, `price`, `ISBN`, `desc`) VALUES
 (1,'Kite chaser','[America] Khaled Husseini','Shanghai Peoples Publishing House', '2006-5', '29.00', '9787208061644', '12-year-old Afghan rich family The young master Amir and his servant Hassan are brothers and sisters. However, after a kite match, a tragic incident happened. Amir felt self-blame and pained for his cowardice and forced Hassan away. Soon, he followed. Father fled to the United States.'),
@@ -41,11 +31,7 @@ INSERT INTO `book_info` (`id`, `name`, `author`, `press`, `press_time`, `price`,
 (10,'A Dream of Red Mansions','Chinese Classical Literature Reader Series','Peoples Literature Publishing House', '1996-12', '59.70', '9787020002207','A Dream of Red Mansions is an encyclopedic novel. Taking Bao Dai’s love tragedy as the main line, with the rise and fall of the four major families as the background, it depicts all aspects of the Chinese feudal society in the 18th century and the emergence of new capitalist democratic ideas under the feudal autocracy. The structure is grand, the plot is euphemistic, the details are exquisite, and the characters are The image is vivid and vivid, and it can be called a classic in ancient Chinese novels.');
 
 
--- --------------------------------------------------------
 
---
-
---
 
 CREATE TABLE `borrow_list` (
   `book_id` int(11) NOT NULL,
@@ -54,9 +40,6 @@ CREATE TABLE `borrow_list` (
   `back_date` date NOT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8;
 
---
-
---
 
 INSERT INTO `borrow_list` (`book_id`, `user_id`, `borrow_date`, `back_date`) VALUES
 (1, 10000, '2018-10-18', '2018-12-18'),
@@ -67,11 +50,7 @@ INSERT INTO `borrow_list` (`book_id`, `user_id`, `borrow_date`, `back_date`) VAL
 (6, 10010, '2018-10-16', '2019-03-16'),
 (8, 18888, '2018-10-17', '2019-02-17');
 
--- --------------------------------------------------------
 
---
--
---
 
 CREATE TABLE `user` (
   `id` int(11) NOT NULL,
@@ -84,9 +63,7 @@ CREATE TABLE `user` (
   `last_login_time` datetime DEFAULT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8;
 
---
 
---
 
 INSERT INTO `user` (`id`, `pwd`, `name`, `Email`, `Phone`, `status`, `admin`, `last_login_time`) VALUES
 (10000, 'e10adc3949ba59abbe56e057f20f883e', 'alice', 'alice@gmail.com','929333333', 1, 1, '2019-12-26 23:02:09'),
@@ -98,35 +75,20 @@ INSERT INTO `user` (`id`, `pwd`, `name`, `Email`, `Phone`, `status`, `admin`, `l
 (88888, 'e10adc3949ba59abbe56e057f20f883e', 'james', 'james@gmail.com','929323333', 0, 0, '2018-10-18 10:11:31');
 
 
---
 
---
 
---
-
---
 ALTER TABLE `book_info`
   ADD PRIMARY KEY (`id`);
 
---
 
---
 ALTER TABLE `borrow_list`
   ADD PRIMARY KEY (`book_id`,`user_id`);
 
---
 
---
 ALTER TABLE `user`
   ADD PRIMARY KEY (`id`);
 
---
 
---
-
---
--
---
 ALTER TABLE `book_info`
   MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=243;
 
